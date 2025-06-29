@@ -15,3 +15,6 @@ def get_book_from_args() -> Path | None:
             return path.name
         else:
             return path
+    else:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)

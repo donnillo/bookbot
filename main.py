@@ -16,8 +16,6 @@ def main():
             with report.stat(character_count, sort=True, top=10) as char_counts:
                 for char, count in char_counts.items():
                     print(f"{char}: {count}")
-    else:
-        print("Usage: python3 main.py <path_to_book>")
 
 
 main()
