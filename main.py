@@ -7,7 +7,7 @@ from paths import get_book_from_args
 
 def main():
     if (BOOK := get_book_from_args()) is not None:
-        with Report(BOOKS / "frankenstein.txt").set_width(30) as report:
+        with Report(BOOKS / BOOK).set_width(30) as report:
             print(f"Analyzing book found at {report.book}")
 
             with report.stat(word_count) as num_of_words:
